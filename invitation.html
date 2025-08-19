@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiệp mời Lễ Tốt Nghiệp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body style="margin:0; background-color: #0b1d3a;">
+  <audio id="bgm" loop>
+    <source src="assets/music/music.mp3" type="audio/mpeg">
+  </audio>
+  <button id="toggleAudio" class="btn btn-outline-warning position-fixed bottom-0 end-0 m-3">
+    <i id="audioIcon" class="fa-solid fa-volume-high"></i>
+  </button>
+
+  <div class="container py-5 px-3 content-container">
+    <div class="text-center" data-aos="fade-up">
+      <h1 class="display-5" style="font-family: 'Great Vibes', cursive; color: #d4af37;">Thiệp mời Lễ Tốt Nghiệp</h1>
+      <img src="assets/images/nhattien.png" alt="Avatar" class="rounded-circle shadow mb-3 avatar-img">
+    </div>
+
+    <!-- Hiển thị tên khách -->
+    <div class="text-center my-3" data-aos="fade-up">
+      <h5 class="display-5" style="font-family: 'Great Vibes', cursive; color: #d4af37;">Thân mời</h5>
+      <h2 id="guestName" style="color:#d4af37; font-family:'Great Vibes', cursive;"></h2>
+    </div>
+
+    <div class="text-center my-3" data-aos="fade-up">
+      <p>Đến dự buổi lễ Tốt nghiệp của Nhật Tiến</p>
+      
+    </div>
+
+    <div class="text-left my-4" data-aos="fade-up">
+      <h6><i class="fa-solid fa-calendar-days text-warning"></i> Thời gian: 14h00 - Ngày 22/08/2025</h6>
+      <h6><i class="fa-solid fa-location-dot text-danger"></i> Địa điểm: Trường Cao đẳng Kinh tế - Kỹ thuật Cần Thơ <br> Số 9, đường Cách Mạng Tháng Tám, phường Cái Khế, Thành phố Cần Thơ</h6>
+    </div>
+
+    <div class="text-center fst-italic my-3" style="color: #555;" data-aos="fade-up">
+      “Mỗi chặng đường đều có điểm dừng, nhưng hành trình tri thức là mãi mãi.”
+    </div>
+
+    <div class="swiper mySwiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6531731502291_f2a2227d6f5a7a11df576daced95f307.jpg" alt="Kỷ niệm 1"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6531754065769_b763ea3be4e495d78c8f3871cf8c1971.jpg" alt="Kỷ niệm 2"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6924334311756_02caad4c7fc855d545079d97fc957c86.jpg" alt="Kỷ niệm 3"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6394308844910_8d55943e6a3e3f2b2f4d87834fa2371d.jpg" alt="Kỷ niệm 4"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/DSC00783.JPG" alt="Kỷ niệm 5"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/DSC03974.JPG" alt="Kỷ niệm 6"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6923985231465_fa4ea5c511935122ebaa68bb425314fe.jpg" alt="Kỷ niệm 7"></div>
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6923990594441_f9308939c2ca78739c22d2330f02fa5a.jpg" alt="Kỷ niệm 8"></div> 
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6923990604001_52b2de2fd91ef8be98bc5f9be9bf3e0c.jpg" alt="Kỷ niệm 9"></div>  
+        <div class="swiper-slide"><img src="assets/images/hoctap/z6923985244888_2f2739829026e472965619c4262aad58.jpg" alt="Kỷ niệm 10"></div>    
+        </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="marquee my-3" data-aos="fade-up">
+      <marquee behavior="scroll" direction="left" scrollamount="5">Thân mời bạn đến tham dự Lễ Tốt Nghiệp của Nhật Tiến - đánh dấu hành trình đáng nhớ!</marquee>
+    </div>
+
+
+    <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbxtRhMlShdyg3OpD3VrLia61U08dKr0Q1tnZS7hRznIyqZnKT4hwU1h6a0eATTKptAk5g/exec" method="POST">
+      <input type="text" id="guestInput" name="name" class="form-control mb-2" placeholder="Tên của bạn" required>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <button type="submit" name="response" value="Tham dự" class="btn btn-success">Tôi sẽ tham dự</button>
+        <button type="submit" name="response" value="Không thể" class="btn btn-secondary">Tôi không thể tham dự</button>
+      </div>
+    </form>
+
+    <!-- Thêm chỗ hiển thị thông báo -->
+    <div id="responseMessage" class="text-center mt-3"></div>
+
+    <div class="text-center mt-4" data-aos="fade-up">
+      <p>Hy vọng trong khoảnh khắc thanh xuân của mình có sự góp mặt của bạn </p><p>Đó là niềm hạnh phúc của mình!</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Lấy tên khách từ URL và hiển thị
+    const params = new URLSearchParams(window.location.search);
+    const guest = params.get("guest");
+    if (guest) {
+      document.getElementById("guestName").innerText = guest;
+    }
+    // điền sẵn vào ô input
+    const input = document.getElementById("guestInput");
+    if (input) input.value = guest;
+    
+  </script>
+</body>
+</html>
